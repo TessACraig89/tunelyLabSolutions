@@ -1,9 +1,11 @@
 // This file allows us to seed our application with data
 // simply run: `node seed.js` from the root of this project folder.
 
+//require ./models S1S5 TC
 var db = require("./models");
 
 var albumList =[];
+//hard-coded model data S1S4 TC
 albumList.push({
               artistName: 'Nine Inch Nails',
               name: 'The Downward Spiral',

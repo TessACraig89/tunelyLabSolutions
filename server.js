@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
  * DATABASE *
  ************/
 
+//require models TC
 var db = require('./models');
 
 /**********
@@ -25,6 +26,8 @@ var db = require('./models');
  * HTML Endpoints
  */
 
+// when routed to http://localhost:3000/ homepage function is called TC
+  // respond by sending '/views/index.html' file
 app.get('/', function homepage (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
@@ -45,6 +48,9 @@ app.get('/api', function api_index (req, res){
   });
 });
 
+// when user routes to '/api/albums' albumsIndex function is called S1S2 TC
+  // find and respond with all albums in Album db S1S5 TC
+    // since API route send JSON S1S2 TC
 app.get('/api/albums', function albumsIndex(req, res) {
   db.Album.find({}, function(err, albums) {
     res.json(albums);

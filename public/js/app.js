@@ -6,6 +6,8 @@
  */
 
 /* document ready */
+//use ajax $.get to get /api/albums S1S2 TC 
+// on success render each album for albums S1S1
 $(document).ready(function() {
   console.log('app.js loaded!');
   $.get('/api/albums').success(function (albums) {
